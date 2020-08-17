@@ -2,7 +2,9 @@ const express = require('express')
 const path = require('path')
 const hbs = require('hbs')
 const request = require('request')
+
 const app = express()
+const port = process.env.PORT || 3000
 
 const publicDirectoryPath = path.join(__dirname, './public')
 const viewsPath = path.join(__dirname, './templates/views')
@@ -91,6 +93,6 @@ app.get('/view_all_applications',(req, res)=>{
     res.render('view_all_approved_application')   
 })
 
-app.listen(3000,()=>{
-    console.log('App is started on port 3000')
+app.listen(port,()=>{
+    console.log('App is started on port '+ port)
 })
