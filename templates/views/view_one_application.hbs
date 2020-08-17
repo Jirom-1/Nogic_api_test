@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>View single application</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+
+<body>
+    <div class="main-content">
+        {{>header}}
+
+        <p>Get the details of a single application</p>
+
+        <form>
+            <input placeholder="Application ID">
+            <button>Search</button>
+        </form>
+        <p id="message-1"></p>
+
+        <table border="1" style="width: 200px;" id="table_body">
+           <tr>
+               <th>ID</th>
+               <th>Application Status</th>
+               <th>Application Code</th>
+               <th>Certificate Number</th>
+               <th>Date Issued</th>
+               <th>Expiry date</th>
+               <th>NCDMB Approval Date</th>
+               <th>Is Archived?</th>
+               <th>Number of Expatriates</th>
+               <th>Number of New Quotas</th>
+               <th>Number of Renewals</th>
+               <th>Number of Redesignation</th>
+               <th>Number of Withdrawals</th>
+               <th>COMPANY</th>
+           </tr>
+       </table>
+        <p id="message-body"></p>
+
+    </div>
+
+    {{>footer}}
+
+    <script src="/js/one_approved.js"></script>
+</body>
+
+</html>

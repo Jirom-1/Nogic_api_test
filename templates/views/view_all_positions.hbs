@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>View all Positions</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+
+<body>
+    <div class="main-content">
+        {{>header}}
+        <p>Get all positions for an expatriate quota application</p>
+
+        <form>
+            <input placeholder="Application ID">
+            <button>Search</button>
+        </form>
+        <p id="message-1"></p>
+
+       <table border="1" style="width: 200px;" id="table_body">
+           <tr>
+               <th>ID</th>
+               <th>Request Code</th>
+               <th>Quota type</th>
+               <th>Job Title</th>
+               <th>Old Job Title</th>
+               <th>Number of Expatriates</th>
+               <th>Number of Approved Expatriates</th>
+               <th>Age Requirements</th>
+               <th>Application ID</th>
+           </tr>
+       </table>
+        <p id="message-body"></p>
+
+       
+    {{>footer}}
+
+    <script src="/js/all_positions.js"></script>
+    
+
+    
+</body>
+</html>

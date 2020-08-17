@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>View single position</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+
+<body>
+    <div class="main-content">
+        {{>header}}
+
+        <p>Get single position for an expatriate quota application</p>
+
+        <form>
+            <input id="appID" placeholder="Application ID">
+            <input id="reqID" placeholder="Request ID">
+            <button onsubmit="return submitForm()">Search</button>
+        </form>
+        <p id="message-1"></p>
+
+        <table border="1" style="width: 200px;" id="table_body">
+           <tr>
+               <th>ID</th>
+               <th>Request Code</th>
+               <th>Quota type</th>
+               <th>Job Title</th>
+               <th>Old Job Title</th>
+               <th>Number of Expatriates</th>
+               <th>Number of Approved Expatriates</th>
+               <th>Age Requirements</th>
+               <th>Application ID</th>
+           </tr>
+       </table>
+        <p id="message-body"></p>
+
+    </div>
+
+    {{>footer}}
+
+    <script src="/js/one_position.js"></script>
+</body>
+
+</html>
