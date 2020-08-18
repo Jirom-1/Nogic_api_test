@@ -26,7 +26,7 @@ form.addEventListener('submit',(e)=>{
                 //console.log((localStorage.getItem('one_data')))
                 console.log(data)
                 if (data.error) {
-                    return message.textContent = data.error
+                    return message.textContent = 'Please enter a vald ID'
                 } 
                 else {
                     message.textContent = ''

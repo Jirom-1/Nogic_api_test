@@ -1,16 +1,13 @@
 
 const company = document.getElementById('company_table')
+const header = document.getElementById('company')
 var data = ''
 var index = ''
 
-// console.log(localStorage.getItem('cell_name'))
-// console.log(localStorage.getItem('one_app'))
-// console.log(localStorage.getItem('one_id'))
 
 if(localStorage.getItem('one_app') === 'true'){
     data = JSON.parse(localStorage.getItem('one_data')).data
-   // data = JSON.parse(localStorage.getItem('one_data')).data
-    //console.log(localStorage.getItem('one_id')[1])
+    header.textContent = data.company.org_name
 
     var tr = "<tr>";
 
@@ -50,6 +47,8 @@ else{
     console.log(index)
 
     data = JSON.parse(localStorage.getItem('All_Apps')).data
+    header.textContent = data[index].company.org_name
+
     var tr = "<tr>";
 
 

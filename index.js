@@ -74,23 +74,38 @@ app.get('/get_all_positions', async (req, res) =>{
 })
 
 app.get('/view_one_application',(req,res)=>{
-    res.render('view_one_application')
+    res.render('view_one_application', {
+        title: 'NOGIC API TEST',
+        name: 'Jirom'
+    })
 })
 
 app.get('/view_all_positions',(req,res)=>{
-    res.render('view_all_positions')
+    res.render('view_all_positions', {
+        title: 'NOGIC API TEST',
+        name: 'Jirom'
+    })
 })
 
 app.get('/view_one_position',(req,res)=>{
-    res.render('view_one_position')
+    res.render('view_one_position', {
+        title: 'NOGIC API TEST',
+        name: 'Jirom'
+    })
 })
 
 app.get('/company',(req,res)=>{
-    res.render('company')
+    res.render('company', {
+        title: 'NOGIC API TEST',
+        name: 'Jirom'
+    })
 })
 
 app.get('/view_all_applications',(req, res)=>{
-    res.render('view_all_approved_application')   
+    res.render('view_all_approved_application', {
+        title: 'NOGIC API TEST',
+        name: 'Jirom'
+    })   
 })
 
 app.listen(port,()=>{
