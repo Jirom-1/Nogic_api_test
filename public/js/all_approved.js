@@ -5,6 +5,7 @@ const message = document.querySelector('#message-body')
 message.textContent = 'Loading..'
 
 const test = (cell)=>{
+    localStorage.setItem('one_app',false)
     localStorage.setItem('cell_name', cell)
 }
 fetch('/get_approved_applications/').then((response) => {

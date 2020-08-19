@@ -3,6 +3,8 @@ const form = document.querySelector('form')
 const search = document.querySelector('input')
 const message = document.querySelector('#message-body')
 const message1 = document.querySelector('#message-1')
+const errorMessage = document.getElementById('errorMessage')
+
 
 
 // const test = (cell)=>{
@@ -13,20 +15,27 @@ form.addEventListener('submit',(e)=>{
     e.preventDefault()
     const appID = search.value //get search text
     //console.log(appID)
-    message.textContent = 'Loading..'
+    errorMessage .textContent = ''
+    
     
     if(!appID){
+        errorMessage.textContent = ''
         return message1.textContent = 'You must provide an Application ID'
     }
+    message.textContent = 'Loading'
+    message1.textContent = ""
 
-    else{
+    
         fetch('/get_all_positions?id='+appID).then((response) => {
             response.json().then((data) => {
+                errorMessage.textContent = ''
+                message1.textContent = ''
                 //localStorage.setItem('one_data',JSON.stringify(data))
                 //console.log((localStorage.getItem('one_data')))
                 console.log(data)
                 if (data.error) {
-                    return message.textContent = 'Please enter a vald ID'
+                    message.textContent = ''
+                    return errorMessage.textContent = 'Please enter a vald ID'
                 } 
                 else {
                     message.textContent = ''
@@ -54,7 +63,7 @@ form.addEventListener('submit',(e)=>{
         })
         localStorage.setItem('one_id', appID)// store the app ID
         localStorage.setItem('one_app',true)// Tell company that we are viewing a single application
-    }
+    
 })
 
 

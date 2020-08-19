@@ -7,6 +7,7 @@ var index = ''
 
 if(localStorage.getItem('one_app') === 'true'){
     data = JSON.parse(localStorage.getItem('one_data')).data
+    console.log(data)
     header.textContent = data.company.org_name
 
     var tr = "<tr>";
